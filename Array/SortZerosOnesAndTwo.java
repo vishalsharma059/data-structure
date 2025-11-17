@@ -31,7 +31,31 @@ public class SortZerosOnesAndTwo {
         arr[j] = temp;
     }
 
-public void sortColors(int[] nums) {
+    public void sortColors(int[] nums) {
+        int countZeroes = 0, countOnes = 0, countTwo = 0;
+        ;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                countZeroes++;
+            } else if (nums[i] == 1) {
+                countOnes++;
+            } else {
+                countTwo++;
+            }
+        }
+        int count = 0;
+        for (int i = 0; i < countZeroes; i++) {
+            nums[count++] = 0;
+        }
+        for (int i = 0; i < countOnes; i++) {
+            nums[count++] = 1;
+        }
+        for (int i = 0; i < countTwo; i++) {
+            nums[count++] = 2;
+        }
+    }
+    
+    static void sortColors1(int[] nums) {
         int countZeroes = 0, countOnes = 0, countTwo = 0;;
         for(int i = 0; i < nums.length; i++){
             if(nums[i] == 0){
