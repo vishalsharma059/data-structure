@@ -2,7 +2,7 @@ package Array;
 
 import java.util.Scanner;
 
-public class findClosestTarget {
+public class FindClosestTarget {
 
     static void find(int arr[], int n, int target) {
         int num1 = 0, num2 = 0;

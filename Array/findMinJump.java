@@ -1,6 +1,6 @@
 package Array;
 
-public class findMinJump {
+public class FindMinJump {
     static int findMin(int arr[], int n) {
         int count = 0, result = 0;
 
