@@ -1,6 +1,7 @@
 package practice;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 
 public class NextGreaterElement {
@@ -45,6 +46,51 @@ public class NextGreaterElement {
             }
             System.out.println("");
         }
+    }
+
+    static boolean palindrome(String s) {
+        int start = 0;
+        int end = s.length() - 1;
+
+        s = s.toLowerCase().replaceAll("[^a-z0-9]", "");
+
+        while (start < end) {
+            if (s.charAt(start) != s.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
+
+        }
+        return true;
+    }
+
+    static String reverseWord(String s) {
+        String[] words = s.trim().split("//s+");
+        int start = 0, end = words.length - 1;
+        while (start < end) {
+            String temp = words[start];
+            words[start] = words[end];
+            words[end] = temp;
+            start++;
+            end--;
+        }
+        return String.join("", words);
+    }
+
+
+    static int secondLargest(int nums[]) {
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > largest) {
+                largest = nums[i];
+                secondLargest = largest;
+            } else if (nums[i] > secondLargest && nums[i] != largest) {
+                secondLargest = nums[i];
+            }
+        }
+        return secondLargest;
     }
 
     static void reverse(int arr[], int start, int end) {
