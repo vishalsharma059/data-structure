@@ -3,7 +3,6 @@ package practice;
 import java.util.Scanner;
 import java.util.Stack;
 
-
 public class NextGreaterElement {
 
     static boolean isArmstrong(int num) {
@@ -78,7 +77,6 @@ public class NextGreaterElement {
         return String.join("", words);
     }
 
-
     static int secondLargest(int nums[]) {
         int largest = Integer.MIN_VALUE;
         int secondLargest = Integer.MIN_VALUE;
@@ -103,20 +101,20 @@ public class NextGreaterElement {
             end--;
         }
     }
-    
+
     static void rightRotate(int arr[], int k) {
         int n = arr.length;
         k = k % n;
 
         int start = 0;
-        
+
         reverse(arr, start, n - 1);
         reverse(arr, start, k - 1);
-        reverse(arr, k, n - 1);   
+        reverse(arr, k, n - 1);
     }
 
     static void strongestNeighbour(int arr[]) {
-        for (int i = 0; i < arr.length - 1 ; i++) {
+        for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] > arr[i + 1]) {
                 System.out.print(arr[i] + " ");
             } else {
@@ -124,13 +122,14 @@ public class NextGreaterElement {
             }
         }
     }
-    
+
     static void printArr(int arr[]) {
         int n = arr.length;
-         for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -139,11 +138,9 @@ public class NextGreaterElement {
         // int []arr = new int[n];
 
         // for (int i = 0; i < n; i++) {
-        //     System.out.print("Enter the arr" + i + " :");
-        //     arr[i] = sc.nextInt();
+        // System.out.print("Enter the arr" + i + " :");
+        // arr[i] = sc.nextInt();
         // }
-
-
 
         // strongestNeighbour(arr);
         System.out.println(isArmstrong(153));
