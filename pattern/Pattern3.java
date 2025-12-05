@@ -1,4 +1,4 @@
-package pattern;
+package Pattern;
 
 public class Pattern3 {
     static void pattern(int n) {

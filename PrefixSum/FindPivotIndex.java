@@ -1,4 +1,4 @@
-package PreffixSum;
+package PrefixSum;
 
 public class FindPivotIndex {
 
